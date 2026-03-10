@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="Javascript/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Explore SA | Travel & Adventures</title>
+</head>
+<body>
+ <header class="main-header">
+    <div class="header-section left">
+        <img src="images/Transparent logo.PNG" alt="SA Travel Guide" class="logo">
+        </div>
+        <div class="header-section center">
+    <p class="sub-heading">For Local South African Explorers</p>
+        </div>
+        <div class="header-section right">
+    <img src="images/Transparent logo.PNG" alt="SA Travel Guide" class="logo">
+      </div>
+   </header>
+           
+   <nav class="navbar">
+          <div class="navigation-bar"></div>
+        
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> |
+            <li><a href="about.html">About</a></li> |
+            <li><a href="destinations.html">Destinations</a></li> |
+            <li><a href="explore.html">Explore</a></li> |
+            <li><a href="blog.html">Blog</a></li> |
+            <li><a href="search.html">Search</a></li> |
+            <li><a href="travel-tips.html">Travel Tips</a></li> |
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <hr>
+<header class="main-header">
+    </header>
+
+<main class="about-container">
+    <section class="about-hero">
+        <h1>We Explore. You Experience</h1>
+        <p>Passionate travelers sharing the beauty and culture of South Africa, one destination at a time.</p>
+    </section>
+
+    <section class="team-section">
+        <h2 class="section-title">Meet the Visionaries</h2>
+        <div class="team-container">
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/binoculars-icon.webp" alt="Explorers" class="member-img explorer">
+                        <h3>Florence & Eazy</h3>
+                        <p>Chief Explorers</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>The Visionaries</h3>
+                        <p>The visionaries behind the routes. If there's a hidden waterfall in Mpumalanga, they’ve probably found it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/builders.jpg" alt="Builders" class="member-img builder">
+                        <h3>Boitumelo & Katlego</h3>
+                        <p>Lead Architects</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>The Builders</h3>
+                        <p>The ones who builds the digital roads you're walking on. Making sure your journey is seamless and bug-free.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/storytellers.jpg" alt="Storytellers" class="member-img explorer">
+                        <h3>Lesedi & Angelia</h3>
+                        <p>Content Curators</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>The Storytellers</h3>
+                        <p>Responsible for capturing the colors and soul of SA through pixels and prose. Turning data into stories.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> </section> </main>
+
+        
+
+<section class="about-content">
+        <div class="split-layout">
+            <div class="about-text">
+                <section class="values-section">
+    <div class="value-card">
+        
+        <h2>Authenticity</h2>
+        <p>We don't do 'filtered' travel. Our team scouts every location to ensure what you see on your screen is exactly what you get on the ground. We only recommend places we have actually stepped foot in.</p>
+    </div>
+    <div class="value-card">
+        
+        <h2>Local First</h2>
+        <p>We believe tourism should benefit the locals. We highlight small, family-owned stays and local guides to keep the 'Ubuntu' spirit alive in travel. Our focus is boosting small South African tourism businesses.</p>
+    </div>
+    <div class="value-card">
+        
+        <h2> Accessibility</h2>
+        <p>Adventure shouldn't require a massive savings account. We specialize in 'Luxury on a Leash', finding the most stunning views for the lowest possible price. Travel shouldn't be a luxury. We find gems for every budget.</p>
+    </div>
+</section>
+                <h2>Our Mission</h2>
+                <p>We are dedicated to helping young South Africans rediscover the beauty of their own backyard. To bridge the gap between hidden local beauty and the young, adventurous spirit of South Africa. We believe that world-class travel doesn't require a passport, it requires a guide. We are here to make local exploration accessible, affordable, and deeply meaningful for every South African.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/SA Destinations.png" alt="About Us">
+            </div>
+        </div>
+    </div>
+    </section>
+</main>
+
+<button id="chat-btn" onclick="toggleChat()">💬</button>
+
+<div id="chat-box" class="chat-hidden">
+    <div class="chat-header">
+        <span>Explore SA Bot</span>
+        <button onclick="toggleChat()">×</button>
+    </div>
+    <div id="chat-content">
+        <p class="bot-msg">Aweh! I'm your Explore SA guide.</p>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="handleSend()">Send</button>
+    </div>
+</div>
+ <hr>
+
+  <footer>
+    <p align="center">
+    © 2026 Explore SA. Discover More. Travel Local.
+  </p>
+    Coded by Group A</footer>
+</container>
+</body>
+</html>
