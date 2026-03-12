@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css">
   <script src="Javascript/script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/> 
   <title>Explore SA | Travel & Adventures</title>
 </head>
 <body>
@@ -42,37 +45,19 @@
 
        <div class="map-section">
     <h3>Explore South Africa by Map</h3>
-    <div class="map-container">
-        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="sa-map">
-            <path d="M420,80 L480,120 L450,300 L300,380 L100,350 L20,300 L50,150 L150,50 Z" 
-                  fill="#e0e0e0" stroke="#999" stroke-width="2" />
+ 
 
-            <a href="about.html#kruger">
-                <circle cx="430" cy="110" r="8" class="pin pulse" />
-                <text x="445" y="115" class="label">Kruger</text>
-            </a>
+       
 
-            <a href="about.html#gold-reef">
-                <circle cx="350" cy="160" r="8" class="pin" />
-                <text x="290" y="155" class="label">Joburg</text>
-            </a>
-
-            <a href="about.html#ushaka">
-                <circle cx="410" cy="260" r="8" class="pin" />
-                <text x="425" y="265" class="label">Durban</text>
-            </a>
-
-            <a href="about.html#table-mountain">
-                <circle cx="100" cy="340" r="8" class="pin" />
-                <text x="40" y="360" class="label">Cape Town</text>
-            </a>
-
-            <a href="about.html#robben-island">
-                <circle cx="85" cy="325" r="5" class="pin mini" />
-            </a>
-        </svg>
-    </div>
+  <h2>Travel Map</h2> 
+            <div id="map"></div> 
+            
+            <!-- Leaflet JS --> 
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+            <script> var map = L.map('map').setView([-30.5595, 22.9375], 5); L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map); L.marker([-33.9249, 18.4241]).addTo(map) .bindPopup("Cape Town") .openPopup(); </script> 
+        
 </div>
+
 
        <button id="chat-btn" onclick="toggleChat()">💬</button>
 
