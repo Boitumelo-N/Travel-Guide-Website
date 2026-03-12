@@ -1,0 +1,683 @@
+body {
+  background-color: grey;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.hero-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Gravitas One", serif;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background: #ffffff;
+}
+
+.header-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+.center {
+  justify-content: center;
+}
+.right {
+  justify-content: flex-end;
+}
+
+.logo {
+  height: 190px;
+}
+
+
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/Sun City.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.overlay {
+  background: rgba (255, 255, 255, 0.2);
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.sub-heading {
+  color: black;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  padding: 0 15px;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: beige;
+  padding: 0 15px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 0 15px;
+}
+
+.header {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+
+.description {
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #2A7B9B;
+font-weight: bold;
+  
+}
+
+a:hover {
+  color: rgba(247, 243, 243, 0.962);
+}
+
+
+.popular-experiences {
+    width: 100%;            
+    text-align: center;     
+    padding: 60px 0;
+}
+
+.wrapper {
+    max-width: 1200px;      
+    margin: 0 auto;         
+}
+
+.experience-grid {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+  font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: #fff;               
+    text-decoration: none; 
+    border-radius: 25px;    
+    transition: background-color 0.3s ease; 
+    margin-top: 15px;     
+}
+
+
+.btn:hover {
+    background-color: #555;
+}
+
+#travel-videos, #photo-gallery, #explorer-stories {
+    display: none;
+    padding: 60px 5%;
+    background: #fff;
+    border-top: 2px solid #00bcd4; /* Adds a nice top border when it appears */
+}
+
+/* 2. Show the section ONLY when the button is clicked */
+#travel-videos:target, 
+#photo-gallery:target, 
+#explorer-stories:target {
+    display: block;
+    animation: slideDown 0.5s ease-out;
+}
+
+.video-library {
+    padding: 50px 5%;
+    background-color: #f9f9f9;
+}
+
+.video-grid {
+    display: grid;
+    /* This forces exactly 3 columns of equal size */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 20px 0;
+    /* This ensures that if there are only 2 items on a row, they stay centered */
+    justify-content: center; 
+}
+
+@media (max-width: 1100px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 700px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 per row on phones */
+    }
+}
+
+.video-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.video-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #000; /* Prevents white flicker while loading */
+}
+
+.video-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Container styling */
+.gallery-container {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* The Grid Logic */
+.gallery-grid {
+    display: grid;
+    /* Forces 4 equal columns on desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* Space between photos */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The Individual Photo Box */
+.gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Makes everything a perfect square */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops the image to fit the square without stretching */
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark tint on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-weight: bold;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets: 2 columns */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones: 1 column */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.about-text, .about-image {
+    flex: 1; 
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px; 
+}
+
+.section-title {
+  color: #333;
+}
+
+
+.team-section {
+    padding: 80px 5%;
+    text-align: center;
+    background: #fff;
+    margin: 60px 0;
+}
+
+.team-container {
+    display: flex;            
+    flex-direction: row;      
+    flex-wrap: wrap;          
+    justify-content: center;  
+    align-items: center;      
+    gap: 40px;               
+    padding: 20px;
+    width: 100%;             
+}
+
+
+.flip-card {
+    flex: 0 0 280px;          
+    height: 350px;
+    perspective: 1000px;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.flip-card-front {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.flip-card-back {
+    background-color: #2A7B9B; 
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+.member-img {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Keeps the whole section centered and neat */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.destination-card {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow for depth */
+}
+
+.destination-card h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Prevents image from being giant */
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Fixes the "Tips" so they stay in a neat row */
+.tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows them to jump to next line on phones */
+    margin-top: 20px;
+}
+
+.tip-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.tip-btn:hover {
+    background-color: #008ba3;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; /* This creates the physical space between cards */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start; /* Prevents cards from stretching unevenly */
+}
+
+/* The flip card container */
+.flip-card {
+    background-color: transparent;
+    height: 400px; /* Fixes overlapping by reserving 400px of vertical space */
+    perspective: 1000px; 
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute; /* This is why we need the fixed height above */
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Crucial: keeps padding inside the 100% width */
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Style the front side */
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+}
+
+.member-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #2A7B9B;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #2A7B9B;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.contact-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: white;
+    color: #00bcd4;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Responsive: 2 cards on tablets, 1 on phones */
+@media (max-width: 900px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .team-grid { grid-template-columns: 1fr; }
+}
+
+.map-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.map-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.sa-map {
+    width: 100%;
+    height: auto;
+}
+
+/* The Pins */
+.pin {
+    fill: #ff5722; /* South African Orange */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.pin:hover {
+    fill: #00bcd4; /* Change to your site's blue on hover */
+    r: 12; /* Grows when hovered */
+}
+
+.label {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    fill: #555;
+    font-weight: bold;
+    pointer-events: none; /* User clicks the pin, not the text */
+}
+
+/* The Pulse Effect for the most popular pin (Kruger) */
+.pulse {
+    animation: pinPulse 2s infinite;
+}
+
+@keyframes pinPulse {
+    0% { stroke: rgba(255, 87, 34, 1); stroke-width: 0; }
+    100% { stroke: rgba(255, 87, 34, 0); stroke-width: 20; }
+}
+
+#map { 
+    height: 400px; 
+    width: 100%; 
+}
+
+#chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background:#2A7B9B;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+
+#chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.chat-hidden { display: none !important; }
+
+.chat-header { background: #333; color: white; padding: 10px; display: flex; justify-content: space-between; }
+
+#chat-content { flex: 1; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+
+
+.bot-msg, .user-msg { padding: 8px 12px; border-radius: 10px; max-width: 80%; font-size: 14px; }
+.bot-msg { background: #333; align-self: flex-start; }
+.user-msg { background: #2A7B9B; color: white; align-self: flex-end; }
+
+.chat-footer { padding: 10px; display: flex; border-top: 1px solid #eee; }
+#chat-input { flex: 1; padding: 5px; }
